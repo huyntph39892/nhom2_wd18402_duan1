@@ -193,7 +193,7 @@
                         <span class="ti-image"></span>
                         <span>Album</span>
                     </a>
-                    <div id="demo8" class="collapse">
+                    <!-- <div id="demo8" class="collapse">
                         <ul class="container mt-3 nav-bar-b">
                             <li>
                                 <a href="<?= CONTROLLERS_ADMIN ?>?action=dsalbum">
@@ -201,7 +201,7 @@
                                 </a>
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
                 </li>
                 <li>
                     <a href="../controllers/user.php">
