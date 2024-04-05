@@ -35,7 +35,7 @@
         <div class="sidebar-menu">
             <?php if ($_COOKIE['role'] == 1) { ?>
                 <ul class="container">
-                    <!-- <li>
+                    <li>
                         <a href="" data-bs-toggle="collapse" data-bs-target="#demo12">
                             <span class="ti-bar-chart"></span>
                             <span>Thống kê</span>
@@ -49,7 +49,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </li> -->
+                    </li>
                     <li>
                         <a href="" data-bs-toggle="collapse" data-bs-target="#demo">
                             <span class="ti-home"></span>
