@@ -19,7 +19,7 @@
                     </div>
                     <div class="input__form__icon card ">
                         <i class="far fa-address-card"></i>
-                        <input class=" nhap_input_login" type="text" name="adress" placeholder="địa chỉ của bạn" value="<?= $adress ?>">
+                        <input class=" nhap_input_login" type="text" name="adress" placeholder="Địa chỉ của bạn" value="<?= $adress ?>">
                     </div>
                     <div class="input__form__icon card ">
                         <i class="fas fa-file"></i>
