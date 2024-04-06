@@ -24,70 +24,6 @@ if (isset($_POST['sua_dm'])) {
     }
 }
 
-// //--------------------thuoc tinh ----------------------------------
-
-// if (isset($_POST['them_thuoctinh'])) {
-//     // var_dump($_POST);
-//     // var_dump($_FILES);
-//     $color = $_POST['mau'];
-//     $size = $_POST['option'];
-//     $img = $_FILES['image']['name'];
-//     foreach ($color as $key => $val) {
-//         foreach ($img as $key2 => $val2) {
-//             if ($key == $key2) {
-//                 $color_img[$key] = array(
-//                     'color' => $val,
-//                     'img' => $val2
-//                 );
-//             }
-//         }
-//     }
-//     // echo "<pre>";
-//     // var_dump($color_img);
-// }
-// if (isset($_POST["them_thuoctinh_sl"])) {
-//     echo "<pre>";
-//     var_dump($_POST);
-//     $color = $_POST['color'];
-//     $img = $_POST['img'];
-//     $size = $_POST['size'];
-//     $number = $_POST['number'];
-//     foreach ($color as $key => $val) {
-//         foreach ($img as $key2 => $val2) {
-//             if ($key == $key2) {
-//                 $color_img[$key] = array(
-//                     'color' => $val,
-//                     'img' => $val2
-//                 );
-//             }
-//         }
-//     }
-
-//     foreach ($color as $key => $val) {
-//         $color_img[$key][$key] = array(
-//             'size' => $size,
-//             'number' => $number
-//         );
-//     }
-
-//     // foreach ($color_img as $key => $val) {
-//     //     echo $val['color'];
-//     //     echo $val['img']; 
-//     //     // foreach($val[$save_key]['size'] as $val2){
-//     //     //     echo $val2;
-//     //     // }
-//     //     foreach($val[$key]['number'] as $val2){
-//     //         echo $val2;
-//     //     }
-//     // }
-//     // foreach ($color_img as $key2 => $val2) {
-//     //     echo  $val2;
-//     // }
-
-//     // var_dump($color_img);
-// }
-
-
 if (isset($_POST['them_sp'])) {
     $title = $_POST['title'];
     $title = $_POST['title'];
@@ -100,33 +36,12 @@ if (isset($_POST['them_sp'])) {
     $special = $_POST['special'];
     $cate_id = $_POST['cate_id'];
     $thongtin = $_POST['thongtin'];
-    // $color = $_POST['color'];
-    // $size = $_POST['size'];
-    // $number = $_POST['number_atri'];
-
-    // var_dump($_POST);
-
-
-
     if (empty($title) || empty($content) || empty($image) || empty($quantity) || empty($price) || empty($sale) || empty($thongtin)) {
         $error['one'] = "<script>alert('Bạn nhập thông tin chưa đầy đủ');</script>";
     }
     if (empty($error)) {
         move_uploaded_file($image_tmp, IMAGE . $image);
         $post->insert_product($title, $content, $thongtin, $image, $quantity, $price, $sale, $special, $cate_id);
-        //--------------------them thuoc tinh-----------------------
-
-        // foreach ($color as $key => $val) :
-        //     foreach ($size as $key2 => $val2) {
-        //         foreach ($number as $key3 => $val3) {
-        //             if ($key == $key2 && $key == $key3) {
-        //                 foreach ($post->max_id_pro() as $val4) {
-        //                     $post->insert_atribute($val, $val2, $val3, $val4['id_pro']);
-        //                 }
-        //             }
-        //         }
-        //     }
-        // endforeach;
         $error['one'] = "<script>alert('Bạn thêm thành công');</script>";
     }
 }
@@ -146,10 +61,6 @@ if (isset($_POST['sua_sp'])) {
     $hiden = $_POST['hiden'];
     $cate_id = $_POST['cate_id'];
 
-    // $color = $_POST['color'];
-    // $size = $_POST['size'];
-    // $number = $_POST['number_atri'];
-    // $id_atri = $_POST['id_attri'];
 
     if (empty($image)) {
         foreach ($post->get_val_id('products', 'id_pro', $_GET['id']) as $val) {
@@ -162,28 +73,6 @@ if (isset($_POST['sua_sp'])) {
     }
     $error['one'] = "<script>alert('Bạn sửa thành công');</script>";
 }
-// if(isset($_POST['them_sua_sp'])){
-//     $color = $_POST['color'];
-//     $size = $_POST['size'];
-//     $number = $_POST['number_atri'];
-//     //--------------------------------them thuoc tinh------------------------------
-//     foreach ($color as $key => $val) :
-//         foreach ($size as $key2 => $val2) {
-//             foreach ($number as $key3 => $val3) {
-//                 if ($key == $key2 && $key == $key3) {
-//                     $post->insert_atribute($val, $val2, $val3, $_GET['id']);
-//                 }
-//             }
-//         }
-//     endforeach;
-// }
-// if(isset($_POST['sua_atri'])){
-//     $color = $_POST['color'];
-//     $size = $_POST['size'];
-//     $number = $_POST['number_atri'];
-//     $post->update_atribute($color, $size, $number, $_GET['atri_id']);
-//     header("location:" . CONTROLLERS_ADMIN . "?action=sua_sp&id=".$_GET['pro_id']);
-// }
 
 if (isset($_POST['sua_user'])) {
     $id_user = $_GET['id_user'];
