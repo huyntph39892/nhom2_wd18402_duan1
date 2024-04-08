@@ -62,9 +62,6 @@
                                           </div>
                                       </div>
                                   </div>
-                                  <div class="stdio">
-                                      <span>BACH CHU DESIGN</span>
-                                  </div>
                                   <div class="ten_sp">
                                       <strong><?= $title_pro ?></strong>
                                   </div>
