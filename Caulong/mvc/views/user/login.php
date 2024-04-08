@@ -27,7 +27,7 @@ if(isset($id)){
                     <i class="far fa-eye"></i>
                     <input class=" nhap_input_login" type="password" name="pass" placeholder="Mật khẩu của bạn" value="<?php if(isset($_COOKIE['pass'])){echo $_COOKIE['pass'];}?>">
                 </div>
-                
+                <div><a href="../views/user/quenmk.php?action=quenmk" style="color: blue;">Quên mật khẩu</a></div>
                 <input type="submit" value="Đăng nhập" name="login" class="dang_nhap_dk btn">
                 
             </form>
