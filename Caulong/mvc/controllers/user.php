@@ -11,7 +11,7 @@ include_once "../controllers/user/post.php";
 
 include_once "../views/user/not-doi/nav.php";
 //moi lan click vao the a chay url thi gui action = ... ta lay may cai ... ay de phan biet cac trang bang cac include 
-// moi lan action thi chi giao luu voi chinh file user.php... tu user.php di chuyen duoc con cac file khac chuyen vao user.php thi khong
+// moi lan action thi chi giao luu voi chinh file user.php... tu iser.php di chuyen duoc con cac file khac chuyen vao user.php thi khong
  
 if(isset($_GET['action'])){
     switch($_GET['action']){
