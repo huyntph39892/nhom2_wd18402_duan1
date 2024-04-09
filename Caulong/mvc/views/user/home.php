@@ -20,7 +20,7 @@
                     </a>
                     <div class="carousel-caption text-white">
                         <h3><?= $title_banner ?></h3>
-                        <p>We had such a great time in LA!</p>
+                        <p>Uy tín tạo nên niềm tin!</p>
                     </div>
                 </div>
 
